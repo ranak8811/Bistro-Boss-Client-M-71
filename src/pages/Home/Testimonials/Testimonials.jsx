@@ -15,7 +15,8 @@ const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://bistro-boss-server-xi-mocha.vercel.app/reviews")
+    // fetch("https://bistro-boss-server-xi-mocha.vercel.app/reviews")
+    fetch(`${import.meta.env.VITE_API_URL}/reviews`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

@@ -113,9 +113,10 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://bistro-boss-server-xi-mocha.vercel.app/menu/${params.id}`
-          ),
+          // fetch(
+          //   `https://bistro-boss-server-xi-mocha.vercel.app/menu/${params.id}`
+          // ),
+          fetch(`${import.meta.env.VITE_API_URL}/menu/${params.id}`),
       },
       {
         path: "users",
